@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: source sans pro;
+}
+
+/* Background */
+body {
+    position: relative;
+    height: 100vh;
+    background: #348cb2;
+    overflow: hidden;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    width: 7000px;
+    background: url(images/bg.jpg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    animation: bg 60s linear infinite;
+    z-index: -1;
+}
+
+body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
+    background-size: auto, cover;
+    background-repeat: repeat no-repeat;
+    z-index: -1;
+}
+
+@keyframes bg {
+    from {transform: translateX(0)}
+    to {transform: translateX(-3500px)}
+}
+
+
+/* Header */
+header {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+p {
+    font-size: 1.3em;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 15px;
+    margin: 30px 15px;
+    transition: 0.3s;
+}
+
+li:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.228);
+    transform: scale(1.1);
+}
+
+i {
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    color: white;
+    width: auto;
+    font-size: 20px;
+    transition: border 0.3s;
+}
+
+footer a:hover {
+    border-color: transparent;
+}
+
+
+@media (max-width: 768px){
+    header, footer a {
+        font-size: 0.8em;
+    }
+
+    i {
+        color: white;
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+        position: relative;
+        top: 2px;
+    }
+}
