@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: source sans pro;
+}
+
+/* Background */
+body {
+    position: relative;
+    height: 100vh;
+    background: #348cb2;
+    overflow: hidden;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    width: 7000px;
+    background: url("../images/bg.jpg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    animation: bg 60s linear infinite;
+    z-index: -1;
+}
+
+
+
+body:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/overlay-pattern.png"), url("../images/overlay.svg");
+    background-size: auto, cover;
+    background-repeat: repeat no-repeat;
+    z-index: -1;
+}
+
+@keyframes bg {
+    from {transform: translateX(0)}
+    to {transform: translateX(-3500px)}
+}

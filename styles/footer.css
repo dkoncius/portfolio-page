@@ -1,0 +1,40 @@
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("images/footer.svg");
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    color: white;
+    width: auto;
+    font-size: 20px;
+    transition: border 0.3s;
+}
+
+footer a:hover {
+    border-color: transparent;
+}
